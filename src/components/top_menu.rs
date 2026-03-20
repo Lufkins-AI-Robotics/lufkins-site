@@ -74,7 +74,7 @@ pub fn top_menu() -> Html {
             </div>
 
             <div class={logo_class}>
-                <img src="assets/lufkins-logo.svg"/>
+                // <img src="assets/lufkins-logo.svg"/>
                 <div class="title-container-reg">
                     <h1 class="top-text-title-reg">{ "Lufkins" }</h1>
                     <p>

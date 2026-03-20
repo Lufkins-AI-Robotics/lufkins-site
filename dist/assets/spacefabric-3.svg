@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="sf3-glow" cx="450" cy="180" r="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6a5acd" stop-opacity="0.25"/>
+      <stop offset="50%" stop-color="#ff4d6d" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Glow at warp center -->
+  <circle cx="450" cy="180" r="180" fill="url(#sf3-glow)"/>
+
+  <!-- Horizontal fabric lines (perspective: narrower spacing toward top) -->
+  <g fill="none" stroke-width="1" opacity="0.6">
+    <path d="M 80,100 C 250,100 350,98 410,92 Q 450,88 490,92 C 550,98 650,100 720,100" stroke="#6a5acd" stroke-opacity="0.3"/>
+    <path d="M 60,130 C 230,130 340,126 405,115 Q 450,108 495,115 C 560,126 670,130 740,130" stroke="#6a5acd" stroke-opacity="0.4"/>
+    <path d="M 40,160 C 210,160 320,154 395,135 Q 450,124 505,135 C 580,154 690,160 760,160" stroke="#6a5acd" stroke-opacity="0.5"/>
+    <path d="M 20,195 C 190,195 300,188 375,160 Q 450,138 525,160 C 600,188 710,195 780,195" stroke="#8a6aed" stroke-opacity="0.7"/>
+    <path d="M 20,220 C 180,220 280,215 360,195 Q 450,170 540,195 C 620,215 720,220 780,220" stroke="#9a7aff" stroke-opacity="0.8"/>
+    <path d="M 20,250 C 170,250 270,255 355,280 Q 450,315 545,280 C 630,255 730,250 780,250" stroke="#ff4d6d" stroke-opacity="0.8"/>
+    <path d="M 20,280 C 180,280 290,284 370,300 Q 450,325 530,300 C 610,284 720,280 780,280" stroke="#ff4d6d" stroke-opacity="0.6"/>
+    <path d="M 30,315 C 200,315 310,317 385,328 Q 450,338 515,328 C 590,317 700,315 770,315" stroke="#6a5acd" stroke-opacity="0.5"/>
+    <path d="M 40,350 C 220,350 330,351 395,356 Q 450,360 505,356 C 570,351 680,350 760,350" stroke="#6a5acd" stroke-opacity="0.4"/>
+    <path d="M 50,385 Q 450,388 750,385" stroke="#6a5acd" stroke-opacity="0.3"/>
+    <path d="M 60,415 Q 450,417 740,415" stroke="#6a5acd" stroke-opacity="0.25"/>
+  </g>
+
+  <!-- Vertical fabric lines (perspective converging) -->
+  <g fill="none" stroke-width="1" opacity="0.5">
+    <path d="M 150,80 C 150,160 144,200 138,240 Q 135,265 138,290 C 144,330 150,370 150,430" stroke="#6a5acd" stroke-opacity="0.35"/>
+    <path d="M 230,75 C 230,155 218,195 205,235 Q 200,265 205,295 C 218,335 230,375 230,435" stroke="#6a5acd" stroke-opacity="0.45"/>
+    <path d="M 310,70 C 310,145 292,185 272,225 Q 265,260 272,295 C 292,335 310,375 310,440" stroke="#6a5acd" stroke-opacity="0.55"/>
+    <path d="M 380,68 C 380,135 370,175 358,215 Q 352,255 358,295 C 370,340 380,380 380,442" stroke="#8a6aed" stroke-opacity="0.65"/>
+    <path d="M 430,65 C 430,130 428,168 425,210 Q 422,255 425,300 C 428,345 430,385 430,445" stroke="#9a7aff" stroke-opacity="0.7"/>
+    <path d="M 470,65 C 470,130 472,168 475,210 Q 478,255 475,300 C 472,345 470,385 470,445" stroke="#9a7aff" stroke-opacity="0.7"/>
+    <path d="M 520,68 C 520,135 530,175 542,215 Q 548,255 542,295 C 530,340 520,380 520,442" stroke="#8a6aed" stroke-opacity="0.65"/>
+    <path d="M 590,70 C 590,145 608,185 628,225 Q 635,260 628,295 C 608,335 590,375 590,440" stroke="#6a5acd" stroke-opacity="0.55"/>
+    <path d="M 670,75 C 670,155 682,195 695,235 Q 700,265 695,295 C 682,335 670,375 670,435" stroke="#6a5acd" stroke-opacity="0.45"/>
+  </g>
+
+  <!-- Gravitational lensing rings as subtle focal point -->
+  <ellipse cx="450" cy="210" rx="100" ry="25" fill="none" stroke="#6a5acd" stroke-width="0.5" opacity="0.25"/>
+  <ellipse cx="450" cy="220" rx="130" ry="30" fill="none" stroke="#ff4d6d" stroke-width="0.4" opacity="0.15"/>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="sf2-warp" cx="350" cy="220" r="250" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff4d6d" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <linearGradient id="sf2-line" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1"/>
+      <stop offset="30%" stop-color="#6a5acd" stop-opacity="0.9"/>
+      <stop offset="70%" stop-color="#6a5acd" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background warp glow -->
+  <circle cx="350" cy="220" r="250" fill="url(#sf2-warp)"/>
+
+  <!-- Dense grid - horizontal lines with deep funnel effect -->
+  <g fill="none" stroke="url(#sf2-line)" stroke-width="0.8">
+    <path d="M 0,60 Q 350,55 800,60"/>
+    <path d="M 0,90 Q 350,82 800,90"/>
+    <path d="M 0,120 Q 350,105 800,120"/>
+    <path d="M 0,150 Q 350,125 800,150"/>
+    <path d="M 0,180 Q 350,145 800,180"/>
+    <path d="M 0,210 C 150,210 250,170 310,160 Q 350,155 390,160 C 450,170 550,210 800,210"/>
+    <path d="M 0,240 C 150,240 240,210 300,195 Q 350,185 400,195 C 460,210 550,240 800,240"/>
+    <path d="M 0,270 C 150,270 230,280 300,310 Q 350,340 400,310 C 470,280 550,270 800,270"/>
+    <path d="M 0,300 C 150,300 240,305 310,325 Q 350,345 390,325 C 460,305 550,300 800,300"/>
+    <path d="M 0,330 C 180,330 270,333 330,342 Q 350,348 370,342 C 430,333 520,330 800,330"/>
+    <path d="M 0,360 Q 350,368 800,360"/>
+    <path d="M 0,390 Q 350,395 800,390"/>
+    <path d="M 0,420 Q 350,422 800,420"/>
+    <path d="M 0,450 Q 350,451 800,450"/>
+  </g>
+
+  <!-- Vertical lines with warp -->
+  <g fill="none" stroke="url(#sf2-line)" stroke-width="0.8" opacity="0.5">
+    <path d="M 100,30 Q 98,250 100,470"/>
+    <path d="M 170,30 Q 162,250 170,470"/>
+    <path d="M 240,30 C 240,150 220,200 210,240 Q 205,270 210,300 C 220,340 240,380 240,470"/>
+    <path d="M 310,30 C 310,140 290,180 280,220 Q 275,260 280,300 C 290,340 310,380 310,470"/>
+    <path d="M 350,30 C 350,130 345,170 342,220 Q 340,260 342,300 C 345,350 350,390 350,470"/>
+    <path d="M 390,30 C 390,130 395,170 398,220 Q 400,260 398,300 C 395,350 390,390 390,470"/>
+    <path d="M 460,30 C 460,140 480,180 490,220 Q 495,260 490,300 C 480,340 460,380 460,470"/>
+    <path d="M 530,30 C 530,150 548,200 555,240 Q 560,270 555,300 C 548,340 530,380 530,470"/>
+    <path d="M 600,30 Q 606,250 600,470"/>
+    <path d="M 700,30 Q 703,250 700,470"/>
+  </g>
+
+  <!-- Event horizon ring (kept as a subtle focal point) -->
+  <ellipse cx="350" cy="235" rx="75" ry="18" fill="none" stroke="#ff4d6d" stroke-width="0.6" opacity="0.4"/>
+</svg>
