@@ -1,0 +1,76 @@
+@use "../variables" as *;
+
+.neural-web {
+    position: absolute;
+    left: 5%;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    overflow: visible;
+}
+
+.neural-web-node {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.neural-web-node-circle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #d8d8d8;
+    outline: 1px solid rgba(0, 0, 0, 0.4);
+}
+
+.neural-web-line {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.05);
+    transform-origin: 0 50%;
+    z-index: 1;
+    pointer-events: none;
+    overflow-x: clip;
+    overflow-y: visible;
+}
+
+.neural-web-pulse {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    --h: 5px;
+    width: 5px;
+    height: var(--h);
+    margin-top: calc(var(--h) / -2);
+    transform: rotate(45deg);
+    // border-radius: 50%;
+    background: rgba(134, 134, 134, 0.363);
+    opacity: 0;
+    animation: pulse-travel 2s linear infinite;
+    animation-fill-mode: backwards;
+    will-change: left;
+}
+
+@keyframes pulse-travel {
+    0% {
+        left: -6px;
+        opacity: 0;
+    }
+    5% {
+        opacity: 1;
+    }
+    95% {
+        opacity: 1;
+    }
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}

@@ -1,0 +1,12 @@
+@use "../variables" as *;
+
+#content-container {
+    // background-color: yellow;
+    width: 100%;
+    padding: 100px 50px;
+    flex: 1;
+
+    h1 {
+        text-align: center;
+    }
+}

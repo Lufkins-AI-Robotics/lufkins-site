@@ -1,0 +1,12 @@
+@use "../variables" as *;
+
+#container {
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    // overflow: hidden;
+    display: flex;
+    flex-direction: column;
+
+    // background-color: $off-white;
+}

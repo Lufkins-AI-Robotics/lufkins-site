@@ -1,0 +1,53 @@
+@use "../variables" as *;
+
+.panel-container {
+    background-color: rgba(0, 0, 0, 1);
+    // height: 500px;
+    height: 55vh;
+    width: 100%;
+    position: relative;
+    color: white;
+
+    &.alt {
+        background-color: rgba(255, 255, 255, 0.4);
+        color: black;
+    }
+}
+
+.panel-text-container {
+    position: absolute;
+    top: 50%;
+    left: 12%;
+    transform: translateY(-50%);
+    max-width: 30%;
+    padding: 10px;
+
+    &.alt {
+        right: 12%;
+        left: auto;
+
+        h1 {
+            font-size: 45px;
+        
+            font-weight: 900;
+            background: linear-gradient(135deg, #6C7A89 0%, #BDC3C7 25%, #4A5F7F 50%, #6C7A89 75%, #BDC3C7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    }
+
+    h1 {
+        font-size: 45px;
+    
+        font-weight: 900;
+        background: linear-gradient(135deg, #C0C0C0 0%, #F5F5F5 25%, #808080 50%, #C0C0C0 75%, #F5F5F5 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}

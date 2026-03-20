@@ -1,0 +1,84 @@
+@use "../variables" as *;
+
+#top-text-container {
+    position: relative;
+    height: 70vh;
+    // max-height: 600px;
+    flex-shrink: 0;
+    width: 100%;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+
+    padding-right: 100px;
+}
+
+.title-container {
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    padding-top: 40px;
+
+    p {
+        margin: 0;
+        padding: 0;
+        font-size: 45px;
+
+        span {
+            background: linear-gradient(45deg, #ff4d6d, #6a5acd);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+}
+
+.top-text-title {
+    font-size: 90px;
+    z-index: 50;
+    margin: 0;
+}
+
+.logo-svg {
+    margin-top: 20px;
+    position: relative;
+    z-index: 2;
+    pointer-events: none;
+    max-height: 200px;
+    max-width: 200px;
+}
+
+// Stroke draw animation — grow each line from 0 to full length
+@mixin stroke-draw($length, $delay) {
+    stroke-dasharray: 0 $length;
+    animation: draw-#{round($length)} 0.8s ease-out #{$delay}s forwards;
+}
+
+.logo-stroke {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 48.485;
+    stroke-linejoin: bevel;
+}
+
+@each $name, $length, $delay in
+    (1, 724, 0),
+    (2, 748, 0.12),
+    (3, 703, 0.24),
+    (4, 727, 0.36),
+    (5, 444, 0.48),
+    (6, 559, 0.60),
+    (7, 381, 0.72),
+    (8, 724, 0.84)
+{
+    @keyframes draw-#{$name} {
+        to { stroke-dasharray: #{$length} 0; }
+    }
+    .stroke-#{$name} {
+        stroke-dasharray: 0 #{$length};
+        animation: draw-#{$name} 0.8s ease-out #{$delay}s forwards;
+    }
+}

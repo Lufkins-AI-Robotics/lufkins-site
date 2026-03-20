@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   version="1.1"
+   id="svg1"
+   width="1092"
+   height="1207"
+   viewBox="0 0 1092 1207"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <marker
+       markerWidth="0.52499998"
+       markerHeight="0.99999994"
+       refX="-4.5898576"
+       refY="-13.766861"
+       orient="44.96296742"
+       id="marker17"
+       viewBox="0 0 0.525 1"
+       style="overflow:visible"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;stroke-linecap:butt"
+         d="M 0,-1 1,0 0,1 -0.05,0 Z"
+         transform="scale(0.5)"
+         id="path17" />
+    </marker>
+    <marker
+       markerWidth="0.65240264"
+       markerHeight="1.1049644"
+       refX="-0.95018774"
+       refY="-13.021561"
+       orient="31.66244039"
+       id="marker16"
+       viewBox="0 0 0.525 1"
+       style="overflow:visible"
+       preserveAspectRatio="none">
+      <path
+         style="fill:context-stroke;stroke-linecap:butt"
+         d="M 0,-1 1,0 0,1 -0.05,0 Z"
+         transform="scale(0.5)"
+         id="path16" />
+    </marker>
+    <marker
+       markerWidth="0.52499998"
+       markerHeight="0.99999994"
+       refX="0.029044572"
+       refY="0.168409"
+       orient="45.02599688"
+       id="CapTriangle"
+       viewBox="0 0 0.525 1"
+       style="overflow:visible"
+       preserveAspectRatio="xMidYMid">
+      <path
+         style="fill:context-stroke;stroke-width:0.5;stroke-linecap:butt"
+         d="M 0,-0.5 0.5,0 0,0.5 -0.025,0 Z"
+         id="path61" />
+    </marker>
+    <meshgradient
+       id="meshgradient7"
+       gradientUnits="userSpaceOnUse"
+       x="218.56152"
+       y="187.45285">
+      <meshrow
+         id="meshrow7">
+        <meshpatch
+           id="meshpatch7">
+          <stop
+             path="c 99.4567,0  198.913,0  298.37,0"
+             style="stop-color:#000000;stop-opacity:1"
+             id="stop7" />
+          <stop
+             path="c 0,212.102  0,424.205  0,636.307"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop8" />
+          <stop
+             path="c -99.4567,0  -198.913,0  -298.37,0"
+             style="stop-color:#000000;stop-opacity:1"
+             id="stop9" />
+          <stop
+             path="c 0,-212.102  0,-424.205  0,-636.307"
+             style="stop-color:#ffffff;stop-opacity:1"
+             id="stop10" />
+        </meshpatch>
+      </meshrow>
+    </meshgradient>
+  </defs>
+  <g
+     id="layer1"
+     style="display:inline">
+    <path
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:48.485;stroke-linejoin:bevel;stroke-dasharray:none"
+       d="M 536.06111,913.52291 H 916.86955 Z"
+       id="path1-36" />
+    <path
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:48.485;stroke-linejoin:bevel;stroke-dasharray:none"
+       d="m 191.01995,1004.5478 h 723.6775 z"
+       id="path1-1" />
+    <path
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:48.485;stroke-linejoin:bevel;stroke-dasharray:none"
+       d="M 190.21948,505.96977 H 916.50953 Z"
+       id="path1-3" />
+    <path
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:48.485;stroke-linejoin:bevel;stroke-dasharray:none"
+       d="m 190.71645,189.14892 h 723.6775 z"
+       id="path1" />
+    <path
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:49.091;stroke-linejoin:bevel;stroke-dasharray:none"
+       d="m 552.68941,190.7424 -1.04452,747.06073 z"
+       id="path2" />
+    <path
+       style="fill:url(#meshgradient7);fill-opacity:1;stroke:#000000;stroke-width:48.485;stroke-linecap:butt;stroke-linejoin:bevel;stroke-dasharray:none;stroke-dashoffset:0;marker-start:url(#marker16);marker-mid:url(#CapTriangle);marker-end:url(#marker17)"
+       d="M 516.93153,187.45285 218.56152,823.76034 Z"
+       id="path3" />
+    <path
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:48.485;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="M 590.43723,502.65541 776.97359,904.98875 Z"
+       id="path5" />
+    <path
+       style="fill:#ffffff;fill-opacity:0;stroke:#000000;stroke-width:48.485;stroke-linejoin:bevel;stroke-dasharray:none;stroke-opacity:1"
+       d="m 713.07893,188.79965 c 133.00954,0.36947 192.19152,70.56758 191.75542,162.17149 -0.36948,77.61065 -64.67466,154.46512 -190.27754,154.83459"
+       id="path6" />
+  </g>
+</svg>
