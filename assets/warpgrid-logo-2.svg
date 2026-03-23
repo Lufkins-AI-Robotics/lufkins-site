@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <!-- Background -->
+  <rect width="500" height="500" fill="#ffffff"/>
+
+  <!-- Sphere -->
+  <circle cx="250" cy="250" r="90" fill="#222"/>
+
+  <!-- Grid foreground - 5x5 thick lines, black on white -->
+  <g stroke="#000" stroke-width="2.8" fill="none" stroke-linecap="round">
+    <!-- Horizontal -->
+    <path d="M 30,100 L 470,100"/>
+    <path d="M 30,200 C 160,200 210,182 250,168 290,182 340,200 470,200"/>
+    <path d="M 30,250 C 120,250 180,222 220,206 250,196 280,206 320,222 380,250 470,250"/>
+    <path d="M 30,300 C 160,300 210,318 250,332 290,318 340,300 470,300"/>
+    <path d="M 30,400 L 470,400"/>
+    <!-- Vertical -->
+    <path d="M 100,30 L 100,470"/>
+    <path d="M 200,30 C 200,160 182,210 168,250 182,290 200,340 200,470"/>
+    <path d="M 250,30 C 250,120 222,180 206,220 196,250 206,280 222,320 250,380 250,470"/>
+    <path d="M 300,30 C 300,160 318,210 332,250 318,290 300,340 300,470"/>
+    <path d="M 400,30 L 400,470"/>
+  </g>
+</svg>

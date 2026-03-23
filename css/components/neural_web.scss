@@ -3,9 +3,11 @@
 .neural-web {
     position: absolute;
     left: 5%;
-    bottom: 0;
+    top: 50%;
+    transform: translateY(-50%);
     width: 50%;
     height: 100%;
+    max-height: 600px;
     overflow: visible;
 }
 

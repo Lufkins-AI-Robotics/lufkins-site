@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="500" height="500">
+  <defs>
+    <radialGradient id="s3" cx="42%" cy="36%" r="50%">
+      <stop offset="0%" stop-color="#ff9a44"/>
+      <stop offset="100%" stop-color="#6b1d1d"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="#0a0506"/>
+
+  <!-- Sphere - offset slightly upper-left for variety -->
+  <circle cx="230" cy="230" r="95" fill="url(#s3)"/>
+
+  <!-- Grid foreground - 4x4 extra thick, asymmetric warp toward offset sphere -->
+  <g stroke="#ffb366" stroke-width="3" fill="none" stroke-linecap="round">
+    <!-- Horizontal -->
+    <path d="M 20,110 L 480,110"/>
+    <path d="M 20,210 C 120,210 170,190 230,168 290,190 350,210 480,210"/>
+    <path d="M 20,310 C 120,310 170,326 230,346 290,326 350,310 480,310"/>
+    <path d="M 20,410 L 480,410"/>
+    <!-- Vertical -->
+    <path d="M 110,20 L 110,480"/>
+    <path d="M 210,20 C 210,120 190,170 168,230 190,290 210,350 210,480"/>
+    <path d="M 310,20 C 310,120 326,170 346,230 326,290 310,350 310,480"/>
+    <path d="M 410,20 L 410,480"/>
+  </g>
+</svg>

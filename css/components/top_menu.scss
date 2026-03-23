@@ -30,7 +30,7 @@
     }
     
     border-radius: 5px;
-    border: 1px solid $gds-green;
+    border: 1px solid #6d6d6d;
     transition: all ease 0.2s;
     
     &:hover {
@@ -41,9 +41,9 @@
     }
     
     /* From https://css.glass */
-    background: rgba(0, 112, 60, 0.03);
+    background: rgba(93, 93, 93, 0.03);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(0, 112, 60, 0.55);
+    border: 1px solid rgba(97, 97, 97, 0.55);
 }
 
 .logo-container {

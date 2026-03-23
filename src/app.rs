@@ -1,20 +1,50 @@
+use wasm_bindgen::closure::Closure;
+use wasm_bindgen::JsCast;
+use web_sys::window;
 use yew::prelude::*;
 use crate::components::{
-    TopMenu, TopText, Content, Panel, NodeWeb, NeuralWeb, ScrollArea,
+    TopMenu, Panel, NodeWeb, NeuralWeb,
 };
+
+const PANEL_COUNT: usize = 2;
+const CYCLE_MS: i32 = 20_000;
 
 #[function_component(App)]
 pub fn app() -> Html {
+    let active = use_state(|| 0usize);
+
+    {
+        let active = active.clone();
+        use_effect_with((), move |_| {
+            let cb = Closure::<dyn FnMut()>::wrap(Box::new(move || {
+                active.set((*active + 1) % PANEL_COUNT);
+            }));
+
+            let id = window()
+                .unwrap()
+                .set_interval_with_callback_and_timeout_and_arguments_0(
+                    cb.as_ref().unchecked_ref(),
+                    CYCLE_MS,
+                )
+                .unwrap();
+
+            Box::new(move || {
+                let _ = window().unwrap().clear_interval_with_handle(id);
+                drop(cb);
+            }) as Box<dyn FnOnce()>
+        });
+    }
+
+    let translate = format!("transform: translateY(-{}vh);", *active * 100);
+
     html! {
-        <ScrollArea outer_class="app-scroll" outer_style="height: 100vh;">
-            <div id="container">
-                <TopMenu />
-                <TopText />
+        <div id="container">
+            <TopMenu />
+            <div class="panel-carousel" style={translate}>
                 <Panel
                     title="Title"
                     text="Some text describing something related to the graphic"
                     graphic={html! { <NodeWeb /> }}
-                    // panel_type="default"
                 />
                 <Panel
                     title="Title"
@@ -23,6 +53,6 @@ pub fn app() -> Html {
                     panel_type="alt"
                 />
             </div>
-        </ScrollArea>
+        </div>
     }
 }
