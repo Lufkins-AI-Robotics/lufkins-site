@@ -1,39 +1,5 @@
-/* ---- GDS Transport font ---- */
-@font-face {
-    font-family: "GDS Transport";
-    font-weight: normal;
-    font-style: normal;
-    src: url("/fonts/light-94a07e06a1-v2.woff2") format("woff2");
-    font-display: swap;
-}
-@font-face {
-    font-family: "GDS Transport";
-    font-weight: bold;
-    font-style: normal;
-    src: url("/fonts/bold-b542beb274-v2.woff2") format("woff2");
-    font-display: swap;
-}
+$off-white: rgb(248, 248, 248);
+$off-white-hover: rgb(238, 238, 238);
+$off-white-active: rgb(222, 222, 222);
 
-/* ---- Structural tokens (not theme-dependent) ---- */
-$gds-focus-width: 3px;
-
-/* ----- LEFT PANEL ----- */
-$left-width: 17%;
-$item-gap: 1%;
-
-/* ----- MAIN PANEL ----- */
-$main-width: 58%;
-
-/* ----- RIGHT PANEL ----- */
-$right-width: 25%;
-
-/* ----- TIMELINE ----- */
-$line-thickness: 5px;
-$line-rad: 6px;
-
-$off-white: #f2f2f2;
-$top-bg: $off-white;
-
-$top-menu-col: #000000;
-$top-menu-button-hover: #9d9d9d;
-$gds-green: #00703c;
+$off-black: rgb(8, 8, 8);

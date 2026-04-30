@@ -1,46 +1,28 @@
-/* ---- GDS Transport font ---- */
-@font-face {
-  font-family: "GDS Transport";
-  font-weight: normal;
-  font-style: normal;
-  src: url("/fonts/light-94a07e06a1-v2.woff2") format("woff2");
-  font-display: swap;
-}
-@font-face {
-  font-family: "GDS Transport";
-  font-weight: bold;
-  font-style: normal;
-  src: url("/fonts/bold-b542beb274-v2.woff2") format("woff2");
-  font-display: swap;
-}
-/* ---- Structural tokens (not theme-dependent) ---- */
-/* ----- LEFT PANEL ----- */
-/* ----- MAIN PANEL ----- */
-/* ----- RIGHT PANEL ----- */
-/* ----- TIMELINE ----- */
 #container {
   height: 100vh;
   width: 100%;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
 }
 
 #top-menu-container {
-  position: fixed;
-  height: 50px;
+  position: sticky;
+  top: 0;
+  height: fit-content;
   width: 100%;
   display: flex;
+  align-items: center;
   --a: 20px;
   gap: var(--a);
-  padding: 10px var(--a);
+  padding: 7px 12px;
   z-index: 100;
   pointer-events: none;
-  mix-blend-mode: difference;
-  color: white;
+  border-bottom: 1px solid rgb(199, 199, 199);
+  background-color: rgb(238, 238, 238);
 }
 
 .top-menu-button {
-  padding: 9px 11px;
+  padding: 8px 10px;
   width: fit-content;
   height: fit-content;
   cursor: pointer;
@@ -54,19 +36,14 @@
 .top-menu-button {
   border-radius: 5px;
   border: 1px solid #6d6d6d;
-  transition: all ease 0.2s;
+  background-color: rgb(248, 248, 248);
+  transition: background ease 0.2s;
 }
 .top-menu-button:hover {
-  background: rgba(86, 86, 86, 0.129);
+  background-color: rgb(238, 238, 238);
 }
 .top-menu-button:active {
-  background: rgba(92, 92, 92, 0.246);
-}
-.top-menu-button {
-  /* From https://css.glass */
-  background: rgba(93, 93, 93, 0.03);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border: 1px solid rgba(97, 97, 97, 0.55);
+  background-color: rgb(222, 222, 222);
 }
 
 .logo-container {
@@ -74,20 +51,9 @@
   margin-left: auto;
   height: fit-content;
   display: flex;
-  gap: 5px;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-.logo-container--visible {
-  opacity: 1;
-}
-.logo-container img {
-  height: 50px;
-  width: auto;
-  filter: invert(1);
 }
 .logo-container .title-container-reg {
-  font-size: 11px;
+  font-size: 9px;
   margin: 0;
   margin-top: 10px;
   padding: 0;
@@ -99,40 +65,60 @@
   margin: 0;
   padding: 0;
 }
+.logo-container .title-container-reg * span {
+  font-size: 10px;
+}
 
 #top-text-container {
   position: relative;
-  height: 50vh;
   flex-shrink: 0;
   width: 100%;
-  z-index: 1;
   display: flex;
+  align-items: stretch;
+  padding: 50px;
   justify-content: center;
-  align-items: center;
-  overflow: visible;
-  background-color: black;
-  color: white;
+  height: fit-content;
+  gap: 30px;
+  border-bottom: 1px solid rgb(222, 222, 222);
 }
 
-#blocker {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  height: 20%;
-  z-index: 999;
-  background: #000000;
-  background: linear-gradient(0deg, rgb(0, 0, 0) 19%, rgba(255, 255, 255, 0) 100%);
+.sidebar {
+  background: #4d82ff;
+  background: linear-gradient(180deg, rgb(77, 130, 255) 10%, rgba(255, 255, 255, 0) 100%);
+  align-self: stretch;
+  width: 3px;
+  border-radius: 9999px;
+  margin-top: 9px;
+}
+
+.sidebar-dot {
+  border: 2px solid rgb(222, 222, 222);
+  border-radius: 50%;
+  background-color: rgb(248, 248, 248);
+  --hw: 15px;
+  margin-left: -6px;
+  height: var(--hw);
+  width: var(--hw);
 }
 
 .title-container {
   position: relative;
   z-index: 2;
   pointer-events: none;
+  width: 100%;
+  max-width: 600px;
+}
+.title-container h1 {
+  padding: 0;
+  margin: 0;
 }
 .title-container p {
   margin: 0;
+  margin-top: 15px;
+  line-height: 1.2;
   padding: 0;
-  font-size: clamp(45px, 4vw, 70px);
+  font-size: 17px;
+  width: fit-content;
 }
 .title-container p span {
   background: linear-gradient(45deg, #ff4d6d, #6a5acd);
@@ -145,114 +131,6 @@
   font-size: clamp(90px, 8vw, 140px);
   z-index: 50;
   margin: 0;
-}
-
-.logo-svg {
-  margin-top: 20px;
-  position: relative;
-  z-index: 2;
-  pointer-events: none;
-  max-height: 200px;
-  max-width: 200px;
-}
-
-.spacefabric-svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  pointer-events: none;
-  opacity: 0.4;
-}
-
-.logo-stroke {
-  fill: none;
-  stroke: #000000;
-  stroke-width: 48.485;
-  stroke-linejoin: bevel;
-}
-
-@keyframes draw-1 {
-  to {
-    stroke-dasharray: 724 0;
-  }
-}
-.stroke-1 {
-  stroke-dasharray: 0 724;
-  animation: draw-1 0.8s ease-out 0s forwards;
-}
-
-@keyframes draw-2 {
-  to {
-    stroke-dasharray: 748 0;
-  }
-}
-.stroke-2 {
-  stroke-dasharray: 0 748;
-  animation: draw-2 0.8s ease-out 0.12s forwards;
-}
-
-@keyframes draw-3 {
-  to {
-    stroke-dasharray: 703 0;
-  }
-}
-.stroke-3 {
-  stroke-dasharray: 0 703;
-  animation: draw-3 0.8s ease-out 0.24s forwards;
-}
-
-@keyframes draw-4 {
-  to {
-    stroke-dasharray: 727 0;
-  }
-}
-.stroke-4 {
-  stroke-dasharray: 0 727;
-  animation: draw-4 0.8s ease-out 0.36s forwards;
-}
-
-@keyframes draw-5 {
-  to {
-    stroke-dasharray: 444 0;
-  }
-}
-.stroke-5 {
-  stroke-dasharray: 0 444;
-  animation: draw-5 0.8s ease-out 0.48s forwards;
-}
-
-@keyframes draw-6 {
-  to {
-    stroke-dasharray: 559 0;
-  }
-}
-.stroke-6 {
-  stroke-dasharray: 0 559;
-  animation: draw-6 0.8s ease-out 0.6s forwards;
-}
-
-@keyframes draw-7 {
-  to {
-    stroke-dasharray: 381 0;
-  }
-}
-.stroke-7 {
-  stroke-dasharray: 0 381;
-  animation: draw-7 0.8s ease-out 0.72s forwards;
-}
-
-@keyframes draw-8 {
-  to {
-    stroke-dasharray: 724 0;
-  }
-}
-.stroke-8 {
-  stroke-dasharray: 0 724;
-  animation: draw-8 0.8s ease-out 0.84s forwards;
 }
 
 .node-web {
@@ -389,7 +267,6 @@
   left: 0;
   top: 0;
   height: 1px;
-  background: rgba(0, 112, 60, 0.15);
   transform-origin: 0 50%;
   z-index: 0;
   pointer-events: none;
@@ -602,6 +479,57 @@
   bottom: 0;
 }
 
+#top-text-container-alt {
+  position: relative;
+  flex-shrink: 0;
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  padding: 50px;
+  justify-content: center;
+  height: fit-content;
+  gap: 30px;
+  background-color: rgb(8, 8, 8);
+  border-bottom: 1px solid rgb(222, 222, 222);
+}
+
+.sidebar-dot-alt {
+  border: 2px solid rgb(248, 248, 248);
+  border-radius: 50%;
+  background-color: rgb(8, 8, 8);
+  --hw: 15px;
+  margin-left: -6px;
+  height: var(--hw);
+  width: var(--hw);
+}
+
+.title-container-alt {
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+  width: 100%;
+  max-width: 600px;
+  color: rgb(248, 248, 248);
+}
+.title-container-alt h1 {
+  padding: 0;
+  margin: 0;
+}
+.title-container-alt p {
+  margin: 0;
+  margin-top: 15px;
+  line-height: 1.2;
+  padding: 0;
+  font-size: 17px;
+  width: fit-content;
+}
+.title-container-alt p span {
+  background: linear-gradient(45deg, #ff4d6d, #6a5acd);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
 *,
 *::before,
 *::after {
@@ -637,11 +565,4 @@ body {
   user-select: none;
 }
 
-/* Hide native scrollbars globally */
-* {
-  scrollbar-width: none; /* Firefox */
-}
-
-*::-webkit-scrollbar {
-  display: none; /* Chromium / Safari */
-}
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../css/components/container.scss%22,%22../../css/components/top_menu.scss%22,%22../../css/_variables.scss%22,%22../../css/components/top_text.scss%22,%22../../css/components/node_web.scss%22,%22../../css/components/ambient_web.scss%22,%22../../css/components/content.scss%22,%22../../css/components/panel.scss%22,%22../../css/components/neural_web.scss%22,%22../../css/components/scroll_area.scss%22,%22../../css/components/top_text_alt.scss%22,%22../../css/main.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22AAEA;EACI;EACA;EACA;EACA;;;ACJJ;EACI;EACA;EACA;EACA;EAEA;EACA;EACA;EACA;EACA;EAEA;EACA;EACA;EACA,kBChBc;;;ADoBlB;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;;AAVR;EAaI;EACA;EACA,kBCpCQ;EDqCR;;AAEA;EACI,kBCvCU;;ADyCd;EACI,kBCzCW;;;AD6CnB;EACI;EACA;EACA;EACA;;AAgBA;EACI;EACA;EACA;EACA;EAEA;EACA;EACA;;AAEA;EACI;EACA;;AAEA;EACI;;;AEhFhB;EACI;EACA;EACA;EAEA;EACA;EACA;EACA;EACA;EACA;EAEA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA,kBD7BQ;EC8BR;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EAEA;EACA;;AAEA;EACI;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;;;AAKZ;EACI;EACA;EACA;;;ACnEJ;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EAEI;;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AC1DJ;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA,kBACI;EAEJ;EACA;EACA;EACA;;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;;AAGJ;EACI;;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;;;AAIR;EACI;EACA;EACA;EACA;EAEA;EACA;EACA;EACA;;;ACxFJ;EAEI;EACA;EACA;;AAEA;EACI;;;ACPR;EACI;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;;AAEA;EACI;EAEA;EACA;EACA;EACA;EACA;;AAIR;EACI;EAEA;EACA;EACA;EACA;EACA;;AAGJ;EACI;;;ACnDR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;EACA;EAEA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;IACI;IACA;;EAEJ;IACI;;EAEJ;IACI;;EAEJ;IACI;IACA;;;AC3ER;EACI;EACA;;;AAGJ;EACI;EACA;EACA;EACA;;AAEA;EACI;;;AAIR;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;EACA;;;AAGJ;AAAA;AAAA;AAAA;EAII;;;AAGJ;AAAA;EAEI;EACA;EACA;EACA;EACA;;AAEA;AAAA;EACI;;;AAIR;AAAA;AAAA;AAAA;EAII;;;AAGJ;EACI;EACA;EACA;;;AAGJ;EACI;EACA;EACA;;;ACtEJ;EACI;EACA;EACA;EAEA;EACA;EACA;EACA;EACA;EACA;EACA,kBRTQ;EQWR;;;AAGJ;EACI;EACA;EACA,kBRjBQ;EQkBR;EACA;EACA;EACA;;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA,ORlCQ;;AQoCR;EACI;EACA;;AAGJ;EACI;EACA;EACA;EACA;EACA;EACA;;AAEA;EACI;EACA;EACA;EACA;;;ACzCZ;AAAA;AAAA;EAGE;;;AAGF;EACI;;;AAGJ;EACI;AACA;EACA;EACA;EAEA;EACA;EAIA;EACA;EACA;EACA;EACA;EAEA;EAEA,kBACI;EAGJ;EACA;;;AAGJ;AACA;EACI;EACA;EACA%22,%22file%22:%22main.css%22%7D */

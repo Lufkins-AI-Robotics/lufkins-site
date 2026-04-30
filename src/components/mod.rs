@@ -1,5 +1,6 @@
 mod top_menu;
 mod top_text;
+mod top_text_alt;
 mod node_web;
 mod ambient_web;
 mod content;
@@ -15,3 +16,4 @@ pub use content::Content;
 pub use panel::Panel;
 pub use neural_web::NeuralWeb;
 pub use scroll_area::{ScrollArea, ScrollDirection};
+pub use top_text_alt::TopTextAlt;

@@ -3,7 +3,7 @@ use wasm_bindgen::JsCast;
 use web_sys::window;
 use yew::prelude::*;
 use crate::components::{
-    TopMenu, Panel, NodeWeb, NeuralWeb,
+    TopMenu, Panel, NodeWeb, NeuralWeb, TopText, TopTextAlt
 };
 
 const PANEL_COUNT: usize = 2;
@@ -40,19 +40,21 @@ pub fn app() -> Html {
     html! {
         <div id="container">
             <TopMenu />
-            <div class="panel-carousel" style={translate}>
-                <Panel
-                    title="Title"
-                    text="Some text describing something related to the graphic"
-                    graphic={html! { <NodeWeb /> }}
-                />
-                <Panel
-                    title="Title"
-                    text="Some text describing something related to the graphic"
-                    graphic={html! { <NeuralWeb layers={vec![9, 9, 9]} /> }}
-                    panel_type="alt"
-                />
-            </div>
+            <TopText/>
+            <TopTextAlt/>
+            // <div class="panel-carousel" style={translate}>
+            //     <Panel
+            //         title="Title"
+            //         text="Some text describing something related to the graphic"
+            //         graphic={html! { <NodeWeb /> }}
+            //     />
+            //     <Panel
+            //         title="Title"
+            //         text="Some text describing something related to the graphic"
+            //         graphic={html! { <NeuralWeb layers={vec![9, 9, 9]} /> }}
+            //         panel_type="alt"
+            //     />
+            // </div>
         </div>
     }
 }

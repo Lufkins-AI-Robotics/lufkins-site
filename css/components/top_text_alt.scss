@@ -1,6 +1,6 @@
 @use "../variables" as *;
 
-#top-text-container {
+#top-text-container-alt {
     position: relative;
     flex-shrink: 0;
     width: 100%;
@@ -11,36 +11,28 @@
     justify-content: center;
     height: fit-content;
     gap: 30px;
+    background-color: $off-black;
 
     border-bottom: 1px solid $off-white-active;
 }
 
-.sidebar {
-    background: #4d82ff;
-    background: linear-gradient(180deg, rgba(77, 130, 255, 1) 10%, rgba(255, 255, 255, 0) 100%);
-    align-self: stretch;
-    width: 3px;
-    border-radius: 9999px;
-    margin-top: 9px;
-}
-
-.sidebar-dot {
-    border: 2px solid $off-white-active;
+.sidebar-dot-alt {
+    border: 2px solid $off-white;
     border-radius: 50%;
-    background-color: $off-white;
+    background-color: $off-black;
     --hw: 15px;
     margin-left: -6px;
     height: var(--hw);
     width: var(--hw);
 }
 
-.title-container {
+.title-container-alt {
     position: relative;
     z-index: 2;
     pointer-events: none;
-    // background-color: yellow;
     width: 100%;
     max-width: 600px;
+    color: $off-white;
 
     h1 {
         padding: 0;
@@ -62,10 +54,4 @@
             -webkit-text-fill-color: transparent;
         }
     }
-}
-
-.top-text-title {
-    font-size: clamp(90px, 8vw, 140px);
-    z-index: 50;
-    margin: 0;
 }

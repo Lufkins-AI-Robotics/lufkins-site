@@ -8,6 +8,7 @@
 @use "components/panel.scss";
 @use "components/neural_web.scss";
 @use "components/scroll_area.scss";
+@use "components/top_text_alt.scss";
 
 *,
 *::before,
@@ -53,10 +54,10 @@ body {
     user-select: none;
 }
 
-/* Hide native scrollbars globally */
-* {
-  scrollbar-width: none; /* Firefox */
-}
-*::-webkit-scrollbar {
-  display: none; /* Chromium / Safari */
-}
+// /* Hide native scrollbars globally */
+// * {
+//   scrollbar-width: none; /* Firefox */
+// }
+// *::-webkit-scrollbar {
+//   display: none; /* Chromium / Safari */
+// }
